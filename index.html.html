@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكوكب المراكشي... من القسم الثاني إلى العودة للمجد!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #d4af37; /* ذهبي */
+            --secondary: #b22222; /* أحمر مراكشي */
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* التصميم العام */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+        }
+        
+        /* الهيدر */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .logo {
+            width: 150px;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .header-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeIn 2s ease;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        /* نبذة عن النادي */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* الفترات الذهبية */
+        .golden-era {
+            background-color: #f9f9f9;
+        }
+        
+        .trophy-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .trophy-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .trophy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .trophy-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .trophy-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .trophy-card:hover .trophy-image img {
+            transform: scale(1.1);
+        }
+        
+        .trophy-info {
+            padding: 20px;
+        }
+        
+        .trophy-info h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        /* الظروف الصعبة */
+        .hard-times {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: var(--primary);
+            border: 4px solid var(--secondary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--dark);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--dark);
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--dark);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--dark) transparent transparent;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--dark);
+            position: relative;
+            border-radius: 6px;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        /* قسم الصعود للقسم الأول */
+        .comeback {
+            background: linear-gradient(135deg, var(--primary), #f5d742);
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .comeback h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .comeback-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        /* الفيديو */
+        .video-section {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+        
+        /* الدعوة للدعم */
+        .call-to-action {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        
+        .donate-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+        
+        .paypal-button {
+            background-color: #0070ba;
+            color: white;
+            border: 2px solid #0070ba;
+        }
+        
+        .paypal-button:hover {
+            background-color: transparent;
+            color: #0070ba;
+        }
+        
+        /* مشاركة QR */
+        .qr-section {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .qr-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .qr-code {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .share-options {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        
+        .share-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .share-button:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        
+        /* الفوتر */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* تأثيرات الحركة */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+        
+        /* التجاوب مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .left::before, .right::before {
+                left: 60px;
+                border: medium solid var(--dark);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--dark) transparent transparent;
+            }
+            
+            .left, .right {
+                left: 0;
+            }
+            
+            .donate-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="header-content">
+            <img src="https://via.placeholder.com/150x150?text=شعار+الكوكب" alt="شعار الكوكب المراكشي" class="logo">
+            <h1>الكوكب المراكشي... من القسم الثاني إلى العودة للمجد!</h1>
+            <p>رحلة نادي عريق من الإهمال إلى الصعود للقسم الأول.. قصة كفاح تستحق أن تُروى</p>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- نبذة عن النادي -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">نبذة عن النادي</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>تأسس نادي الكوكب المراكشي عام 1947، ليس مجرد فريق كرة قدم، بل كان رمزاً للفخر والهوية لسكان المدينة الحمراء. حمل النادي اسم "الكوكب" تيمناً بالنجم اللامع، وكان بالفعل نجماً ساطعاً في سماء الكرة المغربية.</p>
+                    <p>عبر تاريخه الطويل، توج الكوكب بلقب الدوري المغربي الممتاز وكأس العرش أكثر من مرة، وشارك في البطولات الإفريقية ممثلاً المغرب بكل فخر. كان ملعب الكوكب مسرحاً للعديد من اللحظات التاريخية التي لا تزال عالقة في أذهان الجماهير.</p>
+                    <p>لكن السنوات الأخيرة شهدت تراجعاً كبيراً في أداء النادي، حيث هبط إلى دوريات الدرجة الثانية، وتعرض للعديد من المشاكل المالية والإدارية التي هددت وجوده.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="ملعب الكوكب القديم">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفترات الذهبية -->
+    <section class="golden-era">
+        <div class="container">
+            <h2 class="section-title">الفترات الذهبية</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">أيام من المجد صنعها الكوكب في ذاكرة الكرة المغربية</p>
+            
+            <div class="trophy-container">
+                <!-- بطولة الدوري -->
+                <div class="trophy-card">
+                    <div class="trophy-image">
+                        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="بطولة الدوري">
+                    </div>
+                    <div class="trophy-info">
+                        <h3>بطل الدوري المغربي</h3>
+                        <p>توج الكوكب بلقب الدوري المغربي الممتاز في مواسم 1967 و1974 و1982، وكان من الأندية الأكثر تتويجاً باللقب في تلك الفترة.</p>
+                    </div>
+                </div>
+                
+                <!-- كأس العرش -->
+                <div class="trophy-card">
+                    <div class="trophy-image">
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="كأس العرش">
+                    </div>
+                    <div class="trophy-info">
+                        <h3>كأس العرش</h3>
+                        <p>فاز الكوكب بكأس العرش المغربي ثلاث مرات، وكانت المباريات النهائية التي خاضها مناسبات كبرى احتفل بها جميع أبناء مراكش.</p>
+                    </div>
+                </div>
+                
+                <!-- المشاركات الإفريقية -->
+                <div class="trophy-card">
+                    <div class="trophy-image">
+                        <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="المشاركات الإفريقية">
+                    </div>
+                    <div class="trophy-info">
+                        <h3>المشاركات الإفريقية</h3>
+                        <p>مثل الكوكب المغرب في بطولات الأندية الإفريقية مرات عديدة، ووصل إلى أدوار متقدمة، محققاً انتصارات تاريخية على أندية كبيرة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- اللاعبون الأسطوريون -->
+            <div style="margin-top: 60px;">
+                <h3 style="text-align: center; font-size: 1.8rem; color: var(--secondary); margin-bottom: 30px;">اللاعبون الأسطوريون</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+                    <div style="text-align: center; width: 150px;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid var(--primary);">
+                            <img src="https://via.placeholder.com/120x120?text=العمراني" alt="لاعب" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h4 style="color: var(--secondary);">محمد العمراني</h4>
+                        <p style="font-size: 0.9rem;">هداف التاريخ</p>
+                    </div>
+                    <div style="text-align: center; width: 150px;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid var(--primary);">
+                            <img src="https://via.placeholder.com/120x120?text=السنتيسي" alt="لاعب" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h4 style="color: var(--secondary);">عبد الكريم السنتيسي</h4>
+                        <p style="font-size: 0.9rem;">قلب الدفاع</p>
+                    </div>
+                    <div style="text-align: center; width: 150px;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid var(--primary);">
+                            <img src="https://via.placeholder.com/120x120?text=العلوي" alt="لاعب" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h4 style="color: var(--secondary);">الحسن العلوي</h4>
+                        <p style="font-size: 0.9rem;">ساحر الكرة</p>
+                    </div>
+                    <div style="text-align: center; width: 150px;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid var(--primary);">
+                            <img src="https://via.placeholder.com/120x120?text=الحداد" alt="لاعب" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h4 style="color: var(--secondary);">مصطفى الحداد</h4>
+                        <p style="font-size: 0.9rem;">حارس الأساطير</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الظروف الصعبة -->
+    <section class="hard-times">
+        <div class="container">
+            <h2 class="section-title">الظروف الصعبة</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">رحلة النسيان التي عاشها نادي عريق</p>
+            
+            <div class="timeline">
+                <!-- الهبوط -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2005: الهبوط الأول</h3>
+                        <p>هبط الكوكب للمرة الأولى في تاريخه إلى القسم الثاني، وكانت صدمة كبيرة للجماهير التي اعتادت على رؤية فريقها في القمة.</p>
+                    </div>
+                </div>
+                
+                <!-- المشاكل المالية -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2010-2015: أزمة مالية خانقة</h3>
+                        <p>تراكمت الديون على النادي وتأخرت رواتب اللاعبين، مما أدى إلى هروب العديد من المواهب وتراجع المستوى الفني.</p>
+                    </div>
+                </div>
+                
+                <!-- غياب الجمهور -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2018: مقاعد الجماهير الفارغة</h3>
+                        <p>وصل عدد المتفرجين في بعض المباريات إلى أقل من 100 متفرج، في مشهد مؤلم لنادي كان يملأ الملاعب في السابق.</p>
+                    </div>
+                </div>
+                
+                <!-- اللامبالاة -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2020: خطر الاختفاء</h3>
+                        <p>كاد النادي أن يختفي بسبب تراكم الديون وعدم وجود داعمين، لولا تدخل بعض المحبين في اللحظات الأخيرة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 60px; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="ملعب فارغ" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                <p style="margin-top: 20px; font-style: italic;">ملعب الكوكب الذي كان يضج بالجماهير أصبح شبه خاوٍ في المباريات الأخيرة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الصعود للقسم الأول -->
+    <section class="comeback">
+        <div class="container">
+            <h2 class="section-title">العودة إلى المجد</h2>
+            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px;">
+                في عام 2023، كتب الكوكب فصلاً جديداً من تاريخه بالصعود إلى القسم الأول بعد سنوات من الغياب، محققاً حلم الجماهير وعودة الأمل.
+            </p>
+            
+            <div class="comeback-stats">
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>2023</h3>
+                    <p>سنة الصعود التاريخي</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3>1</h3>
+                    <p>مركز المجموعة</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-futbol"></i>
+                    <h3>24</h3>
+                    <p>مباراة بدون هزيمة</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>10K+</h3>
+                    <p>متفرج في مباراة الصعود</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="احتفال الصعود" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                <p style="margin-top: 20px; font-style: italic;">جماهير الكوكب تحتفل بالصعود إلى القسم الأول بعد غياب طويل</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفيديو -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">ذكريات لا تنسى</h2>
+            <div class="video-container">
+                <video controls poster="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                    <source src="https://example.com/kawkab-video.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- الدعوة للدعم -->
+    <section class="call-to-action">
+        <div class="cta-content">
+            <h2>"الكوكب ليس فقط فريقاً، بل هو جزء من هوية مراكش... هل سنتركه ينهار؟"</h2>
+            <p>نادي الكوكب يحتاج إلى دعمكم اليوم أكثر من أي وقت مضى. شاركوا في حملة إنقاذ النادي، وانشروا الوعي بتاريخه العريق، وادعموا جهود إعادته إلى مكانته الطبيعية.</p>
+            
+            <div class="donate-buttons">
+                <a href="#support" class="cta-button">ادعم النادي</a>
+                <a href="https://www.paypal.com/paypalme/RachidAloui" class="cta-button paypal-button" target="_blank">
+                    <i class="fab fa-paypal"></i> تبرع عبر PayPal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- مشاركة QR -->
+    <section class="qr-section">
+        <div class="container">
+            <h2 class="section-title">ساعد في نشر الوعي</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">شارك تاريخ الكوكب مع الآخرين وساعد في إحياء تراثه</p>
+            
+            <div class="qr-container">
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://kawkab-marrakech.netlify.app" alt="رمز QR للموقع">
+                    <p>مسح الرمز لمشاركة الموقع</p>
+                </div>
+                <div class="share-options">
+                    <h3 style="color: var(--secondary); margin-bottom: 20px;">شارك الموقع</h3>
+                    <button class="share-button" onclick="copyLink()"><i class="fas fa-copy"></i> نسخ الرابط</button>
+                    <button class="share-button" onclick="shareOnFacebook()"><i class="fab fa-facebook-f"></i> فيسبوك</button>
+                    <button class="share-button" onclick="shareOnTwitter()"><i class="fab fa-twitter"></i> تويتر</button>
+                    <button class="share-button" onclick="shareOnWhatsApp()"><i class="fab fa-whatsapp"></i> واتساب</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <img src="https://via.placeholder.com/100x100?text=شعار+أبيض" alt="شعار الكوكب" style="width: 100px; margin-bottom: 20px;">
+            <p>موقع مخصص لتاريخ نادي الكوكب المراكشي وإحياء ذكرياته</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© 2023 نادي الكوكب المراكشي. كل الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // كود JavaScript للتنقل السلس
+        document.querySelector('.scroll-down').addEventListener('click', function() {
+            window.scrollBy({
+                top: window.innerHeight - 100,
+                behavior: 'smooth'
+            });
+        });
+        
+        // نسخ الرابط
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('تم نسخ رابط الموقع! يمكنك الآن مشاركته مع الآخرين.');
+        }
+        
+        // مشاركة على فيسبوك
+        function shareOnFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank');
+        }
+        
+        // مشاركة على تويتر
+        function shareOnTwitter() {
+            window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent('تعرف على تاريخ نادي الكوكب المراكشي العريق'), '_blank');
+        }
+        
+        // مشاركة على واتساب
+        function shareOnWhatsApp() {
+            window.open('https://wa.me/?text=' + encodeURIComponent('اقرأ عن تاريخ نادي الكوكب المراكشي: ' + window.location.href), '_blank');
+        }
+        
+        // تأثير التمرير
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition > sectionTop + sectionHeight * 0.3) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // تهيئة تأثيرات القسم عند التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(50px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                section.style.transitionDelay = `${index * 0.2}s`;
+            });
+            
+            // جعل القسم الأول مرئياً فوراً
+            if (sections.length > 0) {
+                sections[0].style.opacity = '1';
+                sections[0].style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+</body>
+</html>
